@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -26,6 +28,8 @@ public class CardHandViewController implements Initializable {
     private Label SuitLabel;
 
     @FXML
+    private ImageView imageView;
+    @FXML
     private Label ValueLabel;
 
     private DeckOfCards deck;
@@ -33,12 +37,12 @@ public class CardHandViewController implements Initializable {
 
     @FXML
     void DealNextCard() {
-    FaceNameLabel.setText("booyah");
         Card cardSelected = deck.dealTopCard();
         FaceNameLabel.setText("Face Name: " + cardSelected.getFaceName());
         ColorLabel.setText("Colour: " + cardSelected.getColour());
         SuitLabel.setText("Suit: " + cardSelected.getSuit());
         ValueLabel.setText("Value: " + cardSelected.getFaceValue());
+        imageView.setImage(cardSelected.getImage());
     }
 
     @Override

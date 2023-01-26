@@ -15,7 +15,7 @@
       <AnchorPane stylesheets="@styles.css" />
       <HBox>
          <children>
-            <ImageView fitHeight="410.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageView" fitHeight="410.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/2_of_clubs.png" />
                </image>

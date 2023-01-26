@@ -3,6 +3,8 @@ package com.example.jaretsdeckofcards;
 import java.util.Arrays;
 import java.util.List;
 
+import javafx.scene.image.Image;
+
 public class Card {
     private String suit, faceName;
 
@@ -95,5 +97,13 @@ public class Card {
     public int getFaceValue()
     {
         return getValidFaceNames().indexOf(faceName)+2;
+    }
+
+    //this will return an image of the card
+    public Image getImage()
+    {
+        String fileName = "images/" + faceName + "_of_" + suit + ".png";
+        System.out.println(fileName);
+        return new Image(Card.class.getResourceAsStream(fileName));
     }
 }
