@@ -1,5 +1,7 @@
 package com.example.jaretsdeckofcards;
 
+import javafx.fxml.Initializable;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -76,6 +78,14 @@ import java.util.Scanner;
 
             for (Card card : hand4)
                 System.out.println("Hand 4 card: " + card);
+            CardHandViewController cc = new CardHandViewController();
+            System.out.println(hand1.getClass());
+            System.out.println(deck.getClass());
+            System.out.println(cc.getClass());
+            System.out.println(cc.getClass().getInterfaces());
+
+            ArrayList<CardHandViewController> controllers = new ArrayList<>();
+            controllers.add(cc);
 
         }
     }
